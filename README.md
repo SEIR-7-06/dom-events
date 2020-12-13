@@ -1,7 +1,3 @@
-[Click here to view as a presentation](https://presentations.generalassemb.ly/3e7f8d1f6c73f917d5a041d4da611383#/1)
-
----
-
 <img src="https://i.imgur.com/VLwvpbl.jpg" width="900">
 
 ---

@@ -69,7 +69,10 @@ function handleCommentSubmit(event) {
   // console.log(commentInput.textContent); // => undefined
   const commentInputVal = commentInput.value;
   const newComment = `
-    <li class="comment">${commentInputVal}</li>
+    <li class="comment">
+      ${commentInputVal}
+      <button class="delete">delete</button>
+    </li>
   `;
 
   document
@@ -77,7 +80,49 @@ function handleCommentSubmit(event) {
     .insertAdjacentHTML('beforeend', newComment);
 
   // Clear form input
-  
+  // Select the input
+  // Set the value to empty string
+  commentInput.value = '';
+
 }
 
 commentForm.addEventListener('submit', handleCommentSubmit);
+
+
+// DELETE COMMENT
+// - Listen for delete click
+// - Remove the list item for the delete click
+
+// const deleteBtn = document.querySelectorAll('.delete');
+// console.log(deleteBtn)
+
+// function handleDeleteClick(event) {
+//   console.log(event);
+// }
+
+// This will not work for comments added after page load
+// deleteBtn.addEventListener('click', handleDeleteClick);
+
+// Instead, we use Event Delegation
+// Listen on the parent, or any ancestor element
+const commentList = document.querySelector('ul');
+
+
+function handleCommentListClick(event) {
+  // Only run this code if a certain condition is met
+  // If the element clicked is a delete button
+  // It's a delete if it has the class "delete"
+  // Remove the parent list item
+
+  // console.log(event.target.classList.contains('delete'));
+
+  if (event.target.classList.contains('delete')) {
+    // Remove the comment li
+    // console.log('Delete');
+    // console.log(event.target.parentNode)
+    event.target.parentNode.remove();
+  }
+ }
+
+commentList.addEventListener('click', handleCommentListClick);
+

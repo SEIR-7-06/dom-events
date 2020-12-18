@@ -1,0 +1,25 @@
+.carousel {
+  width: 600px;
+  margin: 40px auto;
+}
+
+.carousel-image-section {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+}
+
+#prev {
+  margin-right: 20px;
+}
+
+img {
+  display: block;
+  height: 400px;
+  margin: 0 auto;
+}

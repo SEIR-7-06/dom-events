@@ -7,6 +7,7 @@
 
 <p>Students will be able to:</p>
 
+- Describe what a DOM event is
 - Add event listeners for events such as `click`
 - Explore the event object
 - Explain event bubbling
